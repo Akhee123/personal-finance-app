@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { ExpenseContext } from "../../../pages/ExpensesPage/ExpensesPage";
+import { AppContext } from "../../../App";
 import Expense from "../Expense/Expense";
 
 function ExpenseList() {
 
-    const context = useContext(ExpenseContext);
+    const context = useContext(AppContext);
 
     return (
         <>
@@ -25,4 +25,3 @@ function ExpenseList() {
 }
 
 export default ExpenseList;
-

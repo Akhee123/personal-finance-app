@@ -1,9 +1,9 @@
-import { ExpenseContext } from "../../../pages/ExpensesPage/ExpensesPage";
+import {  AppContext } from "../../../App";
 import { useContext } from "react";
 
 function AddExpense() {
 
-    const context = useContext(ExpenseContext);
+    const context = useContext(AppContext);
     
     function submitHandler(event){
         event.preventDefault();
@@ -19,7 +19,7 @@ function AddExpense() {
     return (
         <>
             <h1>Add AddExpense</h1>
-            <form method="post" onSubmit={submitHandler}>
+            <form onSubmit={submitHandler}>
                 <label htmlFor="item">Item</label>
                 <input type="text" name="item" />
 

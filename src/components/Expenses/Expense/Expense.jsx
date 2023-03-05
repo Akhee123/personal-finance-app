@@ -12,4 +12,3 @@ function Expense(props) {
 }
 
 export default Expense;
-
