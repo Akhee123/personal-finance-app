@@ -1,25 +1,15 @@
 
-function Expense() {
-    
+function Expense(props) {
+
     return (
         <>
-            <h1>Add Expense</h1>
-            <form>
-                <label htmlFor="item">Item</label>
-                <input type="text" />
-
-                <label htmlFor="date">Date</label>
-                <input type="date" />
-
-                <label htmlFor="amount">Amount</label>
-                <input type="number" />
-
-                <label htmlFor="category">Category</label>
-                <input type="" />
-
-            </form>
+            <h1>{props.amount}</h1>
+            <h4>{props.item}</h4>
+            <h4>{props.date}</h4>
+            <h4>{props.category}</h4>
         </>
     );
 }
 
 export default Expense;
+
