@@ -2,16 +2,22 @@ import AddExpense from "../../components/Expenses/AddExpense/AddExpense";
 import ExpenseList from "../../components/Expenses/ExpenseList/ExpenseList";
 import FilterExpense from "../../components/Expenses/FilterExpense/FilterExpense";
 
+import "./ExpensesPage.css";
+
 function ExpensesPage() {
-  
-    return (
-      <>
-        <div>Expenses Page</div>
-          <AddExpense />
+  return (
+    <>
+      <h1>Expenses Page</h1>
+      <div className="expenses-page">
+        <div>
           <ExpenseList />
-          <FilterExpense />
-      </>
-    );
-  }
-  
-  export default ExpensesPage;
+        </div>
+        <div>
+          <AddExpense />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default ExpensesPage;

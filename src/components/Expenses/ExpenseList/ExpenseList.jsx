@@ -2,12 +2,14 @@ import { useContext } from "react";
 import { AppContext } from "../../../App";
 import Expense from "../Expense/Expense";
 
+import './ExpenseList.css'
+
 function ExpenseList() {
 
     const context = useContext(AppContext);
 
     return (
-        <>
+        <div className="expense-list">
         <h1>Expense List</h1>
             {context.expenses.map((element, index) => {
                 return (
@@ -20,7 +22,7 @@ function ExpenseList() {
                     />
                 );
             })}
-        </>
+        </div>
     );
 }
 

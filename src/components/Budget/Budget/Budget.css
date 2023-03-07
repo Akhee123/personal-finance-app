@@ -1,0 +1,14 @@
+h2{
+    font-weight: normal;
+}
+
+.budget-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 15rem;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}

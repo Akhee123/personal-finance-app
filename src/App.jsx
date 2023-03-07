@@ -6,6 +6,8 @@ import BudgetPage from "./pages/BudgetPage/BudgetPage";
 import ExpensesPage from "./pages/ExpensesPage/ExpensesPage";
 import VisualizationPage from "./pages/VisualizationPage/VisualizationPage";
 
+import './App.css'
+
 export const AppContext = createContext();
 
 const router = createBrowserRouter([

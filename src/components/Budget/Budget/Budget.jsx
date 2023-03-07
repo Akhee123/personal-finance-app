@@ -1,11 +1,12 @@
+import './Budget.css'
 
 function Budget(props) {
 
     return (
-        <>
-            <h1>{props.budget}</h1>
-            <h4>{props.category}</h4>
-        </>
+        <div className='budget-card'>
+            <h2>{props.budget}</h2>
+            <h2>{props.category}</h2>
+        </div>
     );
 }
 

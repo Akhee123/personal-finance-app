@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AppContext } from "../../../App";
 
+import './AddBudget.css';
+
 function AddBudget() {
   const context = useContext(AppContext);
 
@@ -22,7 +24,7 @@ function AddBudget() {
   }
 
   return (
-    <>
+    <div className="add-budget">
       <h1>Add Budget</h1>
       <form onSubmit={submitHandler}>
         <label htmlFor="category">Category</label>
@@ -33,7 +35,7 @@ function AddBudget() {
 
         <button type="submit">Add Budget</button>
       </form>
-    </>
+    </div>
   );
 }
 

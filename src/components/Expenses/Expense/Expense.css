@@ -1,0 +1,17 @@
+h1{
+    font-weight: normal;
+}
+
+h4{
+    font-weight: normal;
+}
+
+.expense-card{
+    width: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}

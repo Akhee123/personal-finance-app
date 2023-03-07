@@ -1,6 +1,8 @@
 import { AppContext } from "../../../App";
 import { useContext } from "react";
 
+import "./AddExpense.css";
+
 function AddExpense() {
   const context = useContext(AppContext);
 
@@ -16,32 +18,40 @@ function AddExpense() {
   }
 
   return (
-    <>
-      <h1>Add AddExpense</h1>
+    <div className="add-expense">
+      <h1>Add Expense</h1>
       <form onSubmit={submitHandler}>
-        <label htmlFor="item">Item</label>
-        <input type="text" name="item" />
+        <div className="enter-item">
+          <label htmlFor="item">Item</label>
+          <input type="text" name="item" />
+        </div>
 
-        <label htmlFor="date">Date</label>
-        <input type="date" name="date" />
+        <div className="enter-date">
+          <label htmlFor="date">Date</label>
+          <input type="date" name="date" />
+        </div>
 
-        <label htmlFor="amount">Amount</label>
-        <input type="number" name="amount" />
+        <div className="enter-amount">
+          <label htmlFor="amount">Amount</label>
+          <input type="number" name="amount" />
+        </div>
 
-        <label htmlFor="category">Category</label>
-        <select name="category" id="category">
-          {context.category.map((element, index) => {
-            return (
-              <option key={index} value={element.category}>
-                {element.category}
-              </option>
-            );
-          })}
-        </select>
+        <div className="select-category">
+          <label htmlFor="category">Category</label>
+          <select name="category" id="category">
+            {context.category.map((element, index) => {
+              return (
+                <option key={index} value={element.category}>
+                  {element.category}
+                </option>
+              );
+            })}
+          </select>
+        </div>
 
         <button type="submit">Add Expense</button>
       </form>
-    </>
+    </div>
   );
 }
 
