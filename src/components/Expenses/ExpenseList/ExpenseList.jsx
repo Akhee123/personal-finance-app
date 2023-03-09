@@ -15,10 +15,11 @@ function ExpenseList() {
                 return (
                     <Expense
                         key={index}
+                        id={element.id}
                         amount={element.amount}
                         item={element.item}
                         date={element.date}
-                        category={element.category}
+                        category={context.category[Number(element.categoryId) - 1].category}
                     />
                 );
             })}

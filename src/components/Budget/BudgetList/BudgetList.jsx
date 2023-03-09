@@ -15,7 +15,8 @@ function BudgetList() {
                 return (
                     <Budget
                         key={index}
-                        budget={element.budget}
+                        id={element.id}
+                        amount={element.amount}
                         category={element.category}
                     />
                 )

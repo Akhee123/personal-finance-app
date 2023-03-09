@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../../App";
+import { apiUrl, addData, fetchData } from "../../../scripts/api";
 
 import './AddBudget.css';
 
@@ -12,14 +13,14 @@ function AddBudget() {
     const form = event.target;
     const formData = new FormData(form);
     const formObj = Object.fromEntries(formData.entries());
+    const returnObj = {...formObj, amount: Number(formObj.amount)};
     if (
         context.category.some((element) => element.category === formObj.category)
     ) {
       alert("Budget has already been entered");
     } else {
-      context.setCategory((prevState) => {
-        return [...prevState, formObj];
-      });
+      // POST and GET
+      addData(apiUrl, returnObj).then(() => {fetchData(apiUrl, context.setCategory, context.setExpenses)});
     }
   }
 
@@ -31,7 +32,7 @@ function AddBudget() {
         <input type="text" name="category" />
 
         <label htmlFor="budget">Budget</label>
-        <input type="number" name="budget" />
+        <input type="number" name="amount" />
 
         <button type="submit">Add Budget</button>
       </form>

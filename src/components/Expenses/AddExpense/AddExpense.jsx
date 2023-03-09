@@ -1,5 +1,6 @@
 import { AppContext } from "../../../App";
 import { useContext } from "react";
+import { apiUrl, addData, fetchData } from "../../../scripts/api";
 
 import "./AddExpense.css";
 
@@ -12,8 +13,13 @@ function AddExpense() {
     const form = event.target;
     const formData = new FormData(form);
     const formObj = Object.fromEntries(formData.entries());
-    context.setExpenses((prevState) => {
-      return [...prevState, formObj];
+    const returnObj = { ...formObj, amount: Number(formObj.amount) };
+
+    const categoryId = event.target[3].selectedOptions[0].id;
+
+      // POST and GET
+    addData(apiUrl + categoryId + "/expenses", returnObj).then(() => {
+      fetchData(apiUrl, context.setCategory, context.setExpenses);
     });
   }
 
@@ -41,7 +47,7 @@ function AddExpense() {
           <select name="category" id="category">
             {context.category.map((element, index) => {
               return (
-                <option key={index} value={element.category}>
+                <option key={index} id={element.id} value={element.category}>
                   {element.category}
                 </option>
               );
