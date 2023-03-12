@@ -7,11 +7,20 @@ h4{
 }
 
 .expense-card{
-    width: 15rem;
+    width: 20rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 1rem;
+}
+
+.expense-details{
+    margin-left: 1rem;
+}
+
+.expense-card button{
+    margin-top: 0;
+    margin-bottom: 0;
 }

@@ -20,6 +20,7 @@ function ExpenseList() {
                         item={element.item}
                         date={element.date}
                         category={context.category[Number(element.categoryId) - 1].category}
+                        categoryId={element.categoryId}
                     />
                 );
             })}

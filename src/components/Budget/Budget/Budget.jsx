@@ -43,7 +43,7 @@ function Budget(props) {
         >
           {(close) => (
             <div className="modal">
-              <h1>Add Budget</h1>
+              <h1>Update Budget</h1>
               <form onSubmit={updateHandler}>
                 <label htmlFor="category">Name</label>
                 <input type="text" name="category" />
@@ -52,8 +52,10 @@ function Budget(props) {
                 <input type="number" name="amount" />
 
                 <div className="update-buttons">
-                  <button type="submit">Update Budget</button>
-                  <button type="button" onClick={close}></button>
+                  <button type="submit">Update</button>
+                  <button type="button" onClick={close}>
+                    Close
+                  </button>
                 </div>
               </form>
             </div>
