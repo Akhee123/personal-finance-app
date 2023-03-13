@@ -1,10 +1,12 @@
 
 function VisualizationPage() {
-    return (
-      <>
-        <div>Visualization Page</div>
-      </>
-    );
-  }
-  
-  export default VisualizationPage;
+  return (
+    <>
+      <div>
+        <h1>Visualization Page</h1>
+      </div>
+    </>
+  );
+}
+
+export default VisualizationPage;
